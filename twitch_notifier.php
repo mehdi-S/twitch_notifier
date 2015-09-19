@@ -10,14 +10,17 @@ function play_sound($sound_dir)
 function is_streaming($streamer, $sound)
 {
 	$file = './flag';
+	if (file_exists($file) == 0)
+		file_put_contents($file, "0");
+
 	$json = file_get_contents("https://api.twitch.tv/kraken/streams/".$streamer."/");
 	$list = json_decode($json, true);
-	#var_dump($list);
 	if (isset($list['stream']) && $list['stream'] != NULL)
 	{
 		$link = $list['stream']['channel']['url'];
 		$game = $list['stream']['channel']['game'];
 		print "\n$streamer is actually streaming on ".$game.".\nurl : ".$link."\n";
+		
 		$current = file_get_contents($file);
 		if (strcmp($current,"0") === 0)
 		{
