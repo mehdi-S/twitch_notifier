@@ -15,7 +15,9 @@ Twitch\_notifier take *two* arguments
 ## Exemple
 To check if kikettestar is streaming, and play sound.mp3 if he's online we can use
 
-`php twitch_notifier.php *kikettestar* *./sound.mp3*`
+`php twitch_notifier.php kikettestar ./sound.mp3`
+
+(note : in this case, the audio file is assumed in the same directory as the script)
 
 congrats !
 ## Prerequisites
