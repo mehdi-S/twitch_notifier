@@ -9,7 +9,7 @@ Not tested on a classic-desktop configuration
 ## Usage
 Twitch\_notifier take *two* arguments
 
-`php twitch_notifier.php *streamer-name* *path-of-the-sound*`
+`php twitch_notifier.php <streamer-name> <path-of-the-sound>`
 
 (note : sound file can be in all format supported by pygame, more info below)
 ## Exemple
