@@ -38,11 +38,7 @@ function is_streaming($streamer, $sound)
 }
 
 if ($argc == 3)
-{
-		is_streaming($argv[1], $argv[2]);
-}
+	is_streaming($argv[1], $argv[2]);
 else
-{
 	return -1;
-}
 ?>
